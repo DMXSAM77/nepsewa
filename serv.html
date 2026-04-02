@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NepSewa - Services</title>
+   
+    <link rel="stylesheet" href="serv.css">
+    <script src="serv.js"></script>
+</head>
+<body>
+
+<header>
+    <h1 class="logo"> NepSewa</h1>
+</header>
+
+<section class="services">
+    <h2>Popular Services</h2>
+
+    <div class="service-container">
+
+        <div class="card" onclick="showDetails('maid')">
+            <img src="https://homeworknepal.com/wp-content/uploads/2024/05/Housemaid.jpg" />
+            <h3>Maid</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+        <div class="card" onclick="showDetails('technician')">
+            <img src="https://homeworknepal.com/wp-content/uploads/2022/09/electrician-electric-electricity-2755683-1024x681.jpg" />
+            <h3>Technician</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+        <div class="card" onclick="showDetails('plumber')">
+            <img src="https://nnps.com.np/wp-content/uploads/2023/06/imgs-1.jpg" />
+            <h3>Plumber</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+        <div class="card" onclick="showDetails('electrician')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwC_BznDpwyR2eeQpC7mAQTTisL33B2Mt3g&s" />
+            <h3>Electrician</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+        <div class="card" onclick="showDetails('cleaning')">
+            <img src="https://sunflowermaids.com/wp-content/uploads/2021/08/Signs-of-a-Bad-Cleaning-Lady.jpg" />
+            <h3>Home Cleaning</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+        <div class="card" onclick="showDetails('ac')">
+            <img src="https://clareservices.com/wp-content/uploads/2020/07/air-conditioning-repair-service-hyderabad.jpg" />
+            <h3>AC Repair</h3>
+            <p>Rs. 500 / hr</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DETAILS -->
+<section class="details">
+    <h2 id="title">Select a Service</h2>
+    <p id="desc"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
