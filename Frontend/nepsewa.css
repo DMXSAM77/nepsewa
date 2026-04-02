@@ -1,0 +1,373 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #ffffff;
+    --primary: #6366f1;
+}
+
+body.light {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --primary: #6366f1;
+}
+
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.navbar .logo a {
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar .logo a:hover {
+    color: var(--primary);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    flex: 1;
+    margin-left: 50px;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 80vh;
+    background: linear-gradient(to right, #6366f1, #06b6d4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECTION */
+.section-title {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 32px;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0 20px 40px 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: var(--card);
+    padding: 20px;
+    width: 180px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* ===== LIGHT BG SECTION ===== */
+.light-bg {
+    background: var(--card);
+    padding: 40px 20px;
+}
+
+/* ===== PROFESSIONAL CARDS ===== */
+.pro-card {
+    background: var(--bg);
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pro-card:hover {
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+    transform: translateY(-5px);
+}
+
+.pro-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pro-card h3 {
+    margin: 10px 0;
+    color: var(--text);
+}
+
+.pro-card p {
+    margin: 5px 0;
+    color: #999;
+    font-size: 14px;
+}
+
+.pro-card button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.pro-card button:hover {
+    background: #4f46e5;
+    transform: scale(1.02);
+}
+
+/* ===== REVIEWS ===== */
+.review-card {
+    background: var(--card);
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+}
+
+.review-card p {
+    margin: 0 0 10px 0;
+    font-style: italic;
+    color: var(--text);
+}
+
+.review-card h4 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--card);
+    color: #999;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle input {
+    display: none;
+}
+
+.toggle-track {
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to right, #1e293b, #334155);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: 0.3s;
+}
+
+.icon {
+    font-size: 14px;
+}
+
+.toggle-thumb {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    left: 3px;
+    transition: 0.4s ease;
+}
+
+input:checked + .toggle-track {
+    background: linear-gradient(to right, #6366f1, #06b6d4);
+}
+
+input:checked + .toggle-track .toggle-thumb {
+    transform: translateX(30px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .grid {
+        gap: 15px;
+        padding: 0 10px 30px 10px;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .pro-card {
+        width: 220px;
+    }
+
+    .review-card {
+        width: 200px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .card {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .pro-card {
+        width: 170px;
+    }
+
+    .review-card {
+        width: 150px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin: 30px 0 15px;
+    }
+}
