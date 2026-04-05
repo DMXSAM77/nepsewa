@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NepSewa — Services &amp; Providers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="serv.css">
+    
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="nepsewa.html" class="nav-left">
+      <img src="final logo.png" alt="NepSewa Logo" class="logo-img">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="nepsewa.html">Home</a></li>
+      <li><a href="services.html">Services &amp; Providers</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="nav-right">
+      <label class="theme-toggle">
+        <input type="checkbox" id="darkToggle">
+        <span class="toggle-track">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- SPLIT LAYOUT -->
+<div class="split-layout">
+
+    <!-- ===== LEFT PANEL — Service List ===== -->
+    <aside class="panel-left">
+        <p class="panel-left-title">Choose a Service</p>
+
+        <div class="svc-item" data-key="maid" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://homeworknepal.com/wp-content/uploads/2024/05/Housemaid.jpg" alt="Maid">
+            <div class="svc-info"><h4>Maid Service</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="cleaning" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://sunflowermaids.com/wp-content/uploads/2021/08/Signs-of-a-Bad-Cleaning-Lady.jpg" alt="Cleaning">
+            <div class="svc-info"><h4>Home Cleaning</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="plumber" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://nnps.com.np/wp-content/uploads/2023/06/imgs-1.jpg" alt="Plumber">
+            <div class="svc-info"><h4>Plumber</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="electrician" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwC_BznDpwyR2eeQpC7mAQTTisL33B2Mt3g&s" alt="Electrician">
+            <div class="svc-info"><h4>Electrician</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="ac" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://clareservices.com/wp-content/uploads/2020/07/air-conditioning-repair-service-hyderabad.jpg" alt="AC">
+            <div class="svc-info"><h4>AC Repair</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="technician" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://homeworknepal.com/wp-content/uploads/2022/09/electrician-electric-electricity-2755683-1024x681.jpg" alt="Technician">
+            <div class="svc-info"><h4>Technician</h4><p>Rs. 300 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="haircutting" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBOJdrtttgPWstF4HcMoxCwE8pU2dNwZEYQg&s" alt="Hair">
+            <div class="svc-info"><h4>Hair Cutting</h4><p>Rs. 200 / person</p></div>
+        </div>
+        <div class="svc-item" data-key="gardener" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC99OjYEYoOEna34FkVD741eZRu7AUVtSO3w&s" alt="Gardener">
+            <div class="svc-info"><h4>Gardener</h4><p>Rs. 1,000 / day</p></div>
+        </div>
+        <div class="svc-item" data-key="makeup" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaaYzEvMXuqWZ5Hp5Q14B9vqRFu5fQvlfBEA&s" alt="Makeup">
+            <div class="svc-info"><h4>Makeup Artist</h4><p>Rs. 500 / hr</p></div>
+        </div>
+        <div class="svc-item" data-key="photographer" onclick="selectService(this)">
+            <img class="svc-thumb" src="https://img.freepik.com/free-photo/young-stylish-photographer-holds-professional-camera-taking-photos_8353-6506.jpg" alt="Photo">
+            <div class="svc-info"><h4>Photographer</h4><p>Rs. 500 / hr</p></div>
+        </div>
+    </aside>
+
+    <!-- ===== RIGHT PANEL — Providers ===== -->
+    <main class="panel-right">
+
+        <!-- Service detail banner -->
+        <div class="svc-detail-banner" id="svcBanner">
+            <img class="svc-banner-img" id="bannerImg" src="" alt="">
+            <div class="svc-banner-body">
+                <h3 id="bannerTitle"></h3>
+                <p  id="bannerDesc"></p>
+                <span class="svc-banner-price" id="bannerPrice"></span>
+            </div>
+            <button class="svc-banner-btn" id="bannerBookBtn">Book Now</button>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="provider-filter-bar" id="filterBar" style="display:none;">
+            <select id="locationSelect">
+                <option value="">All Locations</option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Lalitpur">Lalitpur</option>
+                <option value="Bhaktapur">Bhaktapur</option>
+            </select>
+            <select id="ratingSelect">
+                <option value="0">Any Rating</option>
+                <option value="4.5">4.5+ ⭐</option>
+                <option value="4">4+ ⭐</option>
+                <option value="3">3+ ⭐</option>
+            </select>
+            <div class="day-pills">
+                <span style="font-size:11px;color:#64748b;font-weight:600;">Day:</span>
+                <button class="day-pill" data-day="Mon">Mon</button>
+                <button class="day-pill" data-day="Tue">Tue</button>
+                <button class="day-pill" data-day="Wed">Wed</button>
+                <button class="day-pill" data-day="Thu">Thu</button>
+                <button class="day-pill" data-day="Fri">Fri</button>
+                <button class="day-pill" data-day="Sat">Sat</button>
+                <button class="day-pill" data-day="Sun">Sun</button>
+            </div>
+        </div>
+
+        <!-- Sort row -->
+        <div class="sort-row" id="sortRow" style="display:none;">
+            <span class="sort-lbl">Sort:</span>
+            <button class="sort-pill active" data-sort="score">Best Match</button>
+            <button class="sort-pill" data-sort="rating">Top Rated</button>
+            <button class="sort-pill" data-sort="jobs">Most Jobs</button>
+            <button class="sort-pill" data-sort="experience">Experience</button>
+            <button class="sort-pill" data-sort="response">Fastest</button>
+        </div>
+
+        <!-- Result count -->
+        <p class="result-count" id="resultCount"></p>
+
+        <!-- Placeholder (default state) -->
+        <div class="placeholder-state" id="placeholder">
+            <div class="ph-icon">👈</div>
+            <h3>Select a service</h3>
+            <p>Choose any service from the left panel to see available providers ranked by our algorithm.</p>
+        </div>
+
+        <!-- Provider grid -->
+        <div class="provider-grid" id="providerGrid" style="display:none;"></div>
+
+    </main>
+</div>
+
+<!-- ===== BOOKING MODAL (original from servv.html) ===== -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-grid">
+            <div class="modal-left">
+                <div class="service-image-container">
+                    <img id="serviceImage" src="" alt="Service" class="service-image-large">
+                    <div class="image-nav">
+                        <button class="nav-btn" onclick="previousImage()">&lt;</button>
+                        <button class="nav-btn" onclick="nextImage()">&gt;</button>
+                    </div>
+                </div>
+                <h2 id="modalServiceTitle"></h2>
+                <p id="priceDescription" class="price-desc"></p>
+                <p id="workerInfo" class="worker-info"></p>
+            </div>
+            <div class="modal-right">
+                <h3>Book a Service</h3>
+                <div class="booking-section">
+                    <label>Price</label>
+                    <p class="price-display" id="priceDisplay">Rs 500.00 / Hour</p>
+                </div>
+                <div class="booking-section">
+                    <label>Select Date</label>
+                    <p class="selected-date" id="selectedDate"></p>
+                    <div class="date-picker"></div>
+                </div>
+                <div class="booking-section">
+                    <label>Choose a time period</label>
+                    <p class="time-note">Team will arrive within the selected time</p>
+                    <div class="time-slots">
+                        <button class="time-slot active-time" onclick="selectTime(this,'8AM - 9AM')">8AM - 9AM</button>
+                        <button class="time-slot" onclick="selectTime(this,'9AM - 10AM')">9AM - 10AM</button>
+                        <button class="time-slot" onclick="selectTime(this,'10AM - 11AM')">10AM - 11AM</button>
+                        <button class="time-slot" onclick="selectTime(this,'11AM - 12PM')">11AM - 12PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'12PM - 1PM')">12PM - 1PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'1PM - 2PM')">1PM - 2PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'2PM - 3PM')">2PM - 3PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'3PM - 4PM')">3PM - 4PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'4PM - 5PM')">4PM - 5PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'5PM - 6PM')">5PM - 6PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'6PM - 7PM')">6PM - 7PM</button>
+                        <button class="time-slot" onclick="selectTime(this,'7PM - 8PM')">7PM - 8PM</button>
+                    </div>
+                </div>
+                <button class="book-btn" onclick="proceedToBook()">Proceed to Book</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CONFIRMATION MODAL (original from servv.html) ===== -->
+<div id="confirmModal" class="modal">
+    <div class="modal-content confirm-modal-content">
+        <span class="close-btn" onclick="closeConfirmModal()">&times;</span>
+        <div class="confirm-header">
+            <div class="confirm-service-badge" id="confirmBadge"></div>
+            <h2 class="confirm-title">Book Service</h2>
+            <div class="confirm-timing">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span id="confirmTimingText"></span>
+            </div>
+        </div>
+        <div class="confirm-form">
+            <div class="form-group">
+                <label>Full Name <span class="required">*</span></label>
+                <input type="text" id="cf-name" placeholder="eg: Ram Sharma" class="form-input">
+                <small class="error-msg" id="error-name"></small>
+            </div>
+            <div class="form-group">
+                <label>Address <span class="required">*</span></label>
+                <input type="text" id="cf-address" placeholder="eg: Butwal-10, Rupandehi" class="form-input">
+                <small class="error-msg" id="error-address"></small>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="cf-phone" placeholder="eg: 9800000000" class="form-input">
+                    <small class="error-msg" id="error-phone"></small>
+                </div>
+                <div class="form-group">
+                    <label>Landmark</label>
+                    <input type="text" id="cf-landmark" placeholder="eg: Near Butwal Bus Park" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="cf-email" placeholder="eg: ram@gmail.com" class="form-input">
+                <small class="error-msg" id="error-mail"></small>
+            </div>
+            <div class="form-group">
+                <label>Order Note</label>
+                <textarea id="cf-note" placeholder="eg: Please bring extra tools." class="form-input form-textarea"></textarea>
+            </div>
+            <div class="confirm-summary">
+                <div class="summary-row"><span>Service</span><span id="summaryService">—</span></div>
+                <div class="summary-row"><span>Date &amp; Time</span><span id="summaryDateTime">—</span></div>
+                <div class="summary-row summary-price"><span>Price</span><span id="summaryPrice">—</span></div>
+            </div>
+            <button class="confirm-book-btn" onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FOOTER (original from servv.html) ===== -->
+<footer class="site-footer">
+    <div class="footer-cta-strip">
+        <div class="footer-cta-inner">
+            <div>
+                <h3>Need help at home?</h3>
+                <p>Book trusted professionals in minutes — available across Nepal</p>
+            </div>
+            <button class="footer-cta-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Book a Service ↑</button>
+        </div>
+    </div>
+    <div class="footer-main">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <h2 class="footer-logo">NepSewa</h2>
+                <p class="footer-tagline">नेपालभरि भरपर्दो सेवा<br>Trusted home services across Nepal</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter/X" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="nepsewa.html">Home</a></li>
+                    <li><a href="services.html">Services &amp; Providers</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Home Cleaning</a></li>
+                    <li><a href="services.html">Plumbing</a></li>
+                    <li><a href="services.html">Electrician</a></li>
+                    <li><a href="services.html">AC Repair</a></li>
+                    <li><a href="services.html">Maid Service</a></li>
+                    <li><a href="services.html">Gardening</a></li>
+                    <li><a href="services.html">Photography</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Butwal, Nepal
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        +977-9800000000
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        info@nepsewa.com
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Sun–Sat: 7AM – 8PM
+                    </li>
+                </ul>
+                <h4 class="footer-heading" style="margin-top:24px;">Download App</h4>
+                <div class="app-badges">
+                    <a href="#" class="app-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.53 3.99M12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25"/></svg>
+                        App Store
+                    </a>
+                    <a href="#" class="app-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 20.5v-17c0-.83 1-1.3 1.6-.8l14 8.5c.57.35.57 1.25 0 1.6l-14 8.5c-.6.5-1.6.03-1.6-.8z"/></svg>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 NepSewa Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="services.js"></script>
+</body>
+</html>

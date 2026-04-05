@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NepSewa — Trusted Services at Your Doorstep</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nepsewa.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="nepsewa.html" class="nav-left">
+      <img src="final logo.png" alt="NepSewa Logo" class="logo-img">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="nepsewa.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <!-- <li><a href="services.html">Providers</a></li> -->
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="nav-right">
+      <label class="theme-toggle">
+        <input type="checkbox" id="darkToggle">
+        <span class="toggle-track">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h2>Trusted Services at Your Doorstep</h2>
+        <p>नेपालभरि भरपर्दो सेवा — book trusted professionals instantly</p>
+        <button class="btn" onclick="window.location.href='servv.html'">Get Started</button>
+    </div>
+</section>
+
+<!-- POPULAR SERVICES -->
+<section>
+    <h2 class="section-title">Our Popular Services</h2>
+    <div class="grid">
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+            <p>Home Cleaning</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png">
+            <p>Plumbing</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png">
+            <p>Electric Repair</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
+            <p>AC Service</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+            <p>Toilet Cleaning</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png">
+            <p>Spa & Massage</p>
+        </div>
+        <div class="card" onclick="window.location.href='services.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png">
+            <p>Hair Cutting</p>
+        </div>
+    </div>
+</section>
+
+<!-- TOP PROFESSIONALS — Ranked by algorithm -->
+<section class="light-bg">
+    <h2 class="section-title">Top Rated Professionals</h2>
+    <div class="grid" id="homeProviderGrid">
+        <!-- Populated by nepsewa.js using rankProviders() -->
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="grid">
+        <div class="review-card">
+            <p>"Super fast service and very professional!"</p>
+            <h4>- Anisha</h4>
+        </div>
+        <div class="review-card">
+            <p>"Booking was easy and service was excellent."</p>
+            <h4>- Ramesh</h4>
+        </div>
+        <div class="review-card">
+            <p>"Best platform for home services."</p>
+            <h4>- Bikash</h4>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 NepSewa</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="nepsewa.js"></script>
+</body>
+</html>

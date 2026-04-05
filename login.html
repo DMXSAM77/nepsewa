@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NepSewa Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="nepsewa.html" class="nav-left">
+      <img src="final logo.png" alt="NepSewa Logo" class="logo-img">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="nepsewa.html">Home</a></li>
+      <li><a href="services.html">Services &amp; Providers</a></li>
+      <li><a 
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="nav-right">
+      <label class="theme-toggle">
+        <input type="checkbox" id="darkToggle">
+        <span class="toggle-track">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<!-- AUTH SECTION -->
+<section class="auth-container">
+    <div class="auth-box">
+        <h2 id="formTitle">Welcome Back 👋</h2>
+        <p class="subtitle">Login to continue booking services</p>
+        <form id="authForm">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+        <p class="toggle-text">
+            Don't have an account?
+            <span id="toggleForm">Sign Up</span>
+        </p>
+    </div>
+</section>
+
+<script src="login.js"></script>
+</body>
+</html>
